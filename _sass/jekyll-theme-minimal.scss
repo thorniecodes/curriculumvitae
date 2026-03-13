@@ -1,20 +1,20 @@
-@import "fonts";
+@import "rouge-github";
 
 // ─── Variables ────────────────────────────────────────────────────────────────
 
-$color-bg:         #ffffff;
-$color-text:       #374151;
-$color-heading:    #111827;
-$color-accent:     #1d4ed8;
-$color-muted:      #6b7280;
-$color-border:     #e5e7eb;
-$color-nav-bg:     #1e293b;
-$color-nav-text:   #cbd5e1;
-$color-nav-active: #93c5fd;
-$color-focus:      #2563eb;
+$color-bg:         rgb(219, 204, 181);   // warm parchment
+$color-text:       rgb(80, 49, 47);      // dark warm brown
+$color-heading:    rgb(80, 49, 47);
+$color-burgundy:   rgb(116, 50, 51);     // deep burgundy
+$color-gold:       rgb(186, 142, 105);   // warm gold
+$color-border:     rgba(116, 50, 51, 0.2);
+$color-border-strong: rgba(116, 50, 51, 0.45);
 
-$font-base:        16px;
-$line-height:      1.7;
+$font-script:      'Sacramento', cursive;
+$font-serif:       'Alice', Georgia, serif;
+
+$font-base:        17px;
+$line-height:      1.75;
 $max-width:        900px;
 $nav-height:       2.75rem;
 
@@ -27,7 +27,7 @@ $nav-height:       2.75rem;
 body {
   background: $color-bg;
   color: $color-text;
-  font: #{$font-base}/#{$line-height} "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: #{$font-base}/#{$line-height} $font-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -39,18 +39,19 @@ body {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: $color-nav-bg;
-  color: #ffffff;
+  background: $color-burgundy;
+  color: $color-bg;
   padding: 0.5rem 1rem;
   border-radius: 0 0 4px 4px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-family: $font-serif;
   text-decoration: none;
   z-index: 200;
 
   &:focus {
     top: 0;
-    outline: 3px solid $color-focus;
+    outline: 3px solid $color-gold;
     outline-offset: 2px;
   }
 }
@@ -58,9 +59,10 @@ body {
 // ─── Typography ───────────────────────────────────────────────────────────────
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif;
   color: $color-heading;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: bold;
   margin: 0 0 0.5rem;
 }
 
@@ -78,7 +80,7 @@ li {
 
 strong {
   color: $color-heading;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 em {
@@ -86,16 +88,18 @@ em {
 }
 
 a {
-  color: $color-accent;
+  color: $color-burgundy;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-color: rgba(116, 50, 51, 0.45);
+  text-underline-offset: 3px;
 
   &:hover {
-    color: #1e3a8a;
+    color: darken($color-burgundy, 10%);
+    text-decoration-color: $color-burgundy;
   }
 
   &:focus-visible {
-    outline: 3px solid $color-focus;
+    outline: 3px solid $color-gold;
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -103,7 +107,7 @@ a {
 
 hr {
   border: none;
-  border-top: 1px solid $color-border;
+  border-top: 1px solid $color-border-strong;
   margin: 2.5rem 0;
 }
 
@@ -121,7 +125,7 @@ th, td {
 }
 
 th {
-  font-weight: 600;
+  font-weight: bold;
   color: $color-heading;
 }
 
@@ -133,8 +137,8 @@ img {
 
 .site-header {
   background: $color-bg;
-  border-bottom: 3px solid $color-accent;
-  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid $color-border-strong;
+  padding: 2.5rem 0 2rem;
 }
 
 .header-inner {
@@ -150,34 +154,40 @@ img {
 
 .header-name {
   h1 {
-    font-size: 2rem;
-    letter-spacing: -0.02em;
-    margin: 0 0 0.25rem;
+    font-family: $font-script;
+    font-weight: normal; // Sacramento looks best at normal weight
+    font-size: 3.75rem;
+    line-height: 1.15;
+    color: $color-burgundy;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.1rem;
   }
 
   .header-tagline {
-    color: $color-muted;
-    font-size: 0.9rem;
+    color: $color-gold;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
     margin: 0;
   }
 }
 
 .header-contact {
   font-size: 0.875rem;
+  color: $color-text;
 
   a {
-    color: $color-accent;
+    color: $color-burgundy;
   }
 }
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 .site-nav {
-  background: $color-nav-bg;
+  background: $color-burgundy;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(80, 49, 47, 0.25);
 }
 
 .nav-inner {
@@ -202,28 +212,29 @@ img {
 
 .site-nav a {
   display: block;
-  padding: 0.725rem 0.875rem;
-  color: $color-nav-text;
+  padding: 0.75rem 0.9rem;
+  color: rgba(219, 204, 181, 0.85);
   text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-family: $font-serif;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 0.15s;
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: #ffffff;
+    color: $color-bg;
   }
 
   &:focus-visible {
-    outline: 2px solid $color-nav-active;
+    outline: 2px solid $color-gold;
     outline-offset: -2px;
   }
 
   &[aria-current="true"] {
-    color: #ffffff;
-    border-bottom-color: $color-nav-active;
+    color: $color-bg;
+    border-bottom-color: $color-gold;
   }
 }
 
@@ -239,18 +250,17 @@ main {
   padding: 0 2rem;
 }
 
-// Section headings (h2)
+// Section headings (h2) — small-caps labels in burgundy
 .content-wrapper h2 {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: $color-accent;
-  border-bottom: 1px solid $color-border;
+  color: $color-burgundy;
+  border-bottom: 1px solid $color-border-strong;
   padding-bottom: 0.5rem;
   margin-top: 3.5rem;
   margin-bottom: 1.75rem;
-  // Offset for sticky nav when jumping to anchor
   scroll-margin-top: calc(#{$nav-height} + 1.5rem);
 
   &:first-child {
@@ -258,10 +268,10 @@ main {
   }
 }
 
-// Entry headings (job title, course name, project name)
+// Entry headings (job titles, degree names, project names)
 .content-wrapper h3 {
-  font-size: 0.975rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: bold;
   color: $color-heading;
   margin-top: 1.75rem;
   margin-bottom: 0.1rem;
@@ -272,25 +282,18 @@ main {
   }
 }
 
-// Metadata line immediately after h3 (institution, date, etc.)
-// These are italicized paragraphs: *text*
+// Metadata line immediately after h3 (institution, date) — italic, muted gold
 .content-wrapper h3 + p {
   font-size: 0.875rem;
-  color: $color-muted;
+  color: $color-gold;
+  font-style: italic;
   margin-bottom: 0.5rem;
-}
-
-// Description text following the metadata line
-.content-wrapper h3 + p + p,
-.content-wrapper h3 + p + p + p {
-  font-size: 0.9375rem;
-  color: $color-text;
 }
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
 .site-footer {
-  border-top: 1px solid $color-border;
+  border-top: 1px solid $color-border-strong;
   padding: 1.5rem 0;
   background: $color-bg;
 }
@@ -300,8 +303,9 @@ main {
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
-  color: $color-muted;
+  color: $color-gold;
   font-size: 0.8rem;
+  letter-spacing: 0.04em;
 
   p {
     margin: 0;
@@ -312,7 +316,7 @@ main {
 
 @media (max-width: 640px) {
   .site-header {
-    padding: 1.5rem 0 1.25rem;
+    padding: 2rem 0 1.5rem;
   }
 
   .header-inner {
@@ -326,7 +330,7 @@ main {
   }
 
   .header-name h1 {
-    font-size: 1.6rem;
+    font-size: 2.75rem;
   }
 
   .nav-inner {
@@ -355,26 +359,27 @@ main {
     display: none !important;
   }
 
+  body {
+    background: #fff;
+    font-size: 10pt;
+    color: #000;
+    line-height: 1.5;
+  }
+
   .site-header {
-    border-bottom: 1.5pt solid #000;
+    border-bottom: 1pt solid #000;
     padding: 0 0 0.75rem;
   }
 
   .header-name h1 {
-    font-size: 18pt;
+    font-size: 24pt;
     color: #000;
   }
 
   .header-tagline,
   .header-contact {
-    color: #000;
-    font-size: 10pt;
-  }
-
-  body {
-    font-size: 10pt;
-    color: #000;
-    line-height: 1.5;
+    color: #333;
+    font-size: 9.5pt;
   }
 
   main {
@@ -389,8 +394,8 @@ main {
   .content-wrapper h2 {
     font-size: 7pt;
     color: #000;
+    border-color: #999;
     margin-top: 16pt;
-    border-bottom: 0.5pt solid #999;
   }
 
   .content-wrapper h3 {
@@ -401,6 +406,7 @@ main {
 
   .content-wrapper h3 + p {
     color: #444;
+    font-style: italic;
   }
 
   a {
@@ -408,7 +414,6 @@ main {
     text-decoration: none;
   }
 
-  // Show URLs for external links in print
   a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 7.5pt;
@@ -416,7 +421,6 @@ main {
     font-weight: normal;
   }
 
-  // Don't show URL for nav links or email
   a[href^="mailto"]::after,
   a[href^="#"]::after {
     content: none;
