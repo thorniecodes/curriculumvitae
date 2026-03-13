@@ -156,10 +156,9 @@ img {
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  gap: 1.5rem;
 }
 
 .header-name {
@@ -346,7 +345,7 @@ main {
   }
 
   .header-inner {
-    flex-direction: column-reverse; // photo above name on mobile
+    flex-direction: column;
     align-items: flex-start;
     padding: 0 1.25rem;
   }

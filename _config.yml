@@ -4,5 +4,5 @@ email: thornhik@oregonstate.edu
 show_downloads: false
 theme: jekyll-theme-minimal
 
-# Profile photo: add your image to assets/img/ and set the path below
-# photo: /assets/img/profile.jpg
+# Profile photo
+photo: /assets/img/profile.png

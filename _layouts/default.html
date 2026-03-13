@@ -14,6 +14,11 @@
 
     <header class="site-header" role="banner">
       <div class="header-inner">
+        {% if site.photo %}
+        <div class="header-photo">
+          <img src="{{ site.photo | relative_url }}" alt="Portrait of {{ site.title }}" class="profile-photo">
+        </div>
+        {% endif %}
         <div class="header-name">
           <h1>{{ site.title }}</h1>
           <p class="header-tagline">{{ site.description }}</p>
@@ -21,11 +26,6 @@
             <a href="mailto:{{ site.email }}">{{ site.email }}</a>
           </div>
         </div>
-        {% if site.photo %}
-        <div class="header-photo">
-          <img src="{{ site.photo | relative_url }}" alt="Portrait of {{ site.title }}" class="profile-photo">
-        </div>
-        {% endif %}
       </div>
     </header>
 
