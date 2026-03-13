@@ -31,19 +31,50 @@
 
     <nav class="site-nav" aria-label="Jump to CV section">
       <div class="nav-inner">
-        <ul role="list">
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#honors">Honors</a></li>
-          <li><a href="#community">Community</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#grants">Grants</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#presentations">Presentations</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#training">Training</a></li>
+        <ul class="nav-list" role="list">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Experience <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#experience">Work Experience</a></li>
+              <li><a href="#teaching">Teaching</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Scholarship <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#presentations">Presentations</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#grants">Grants</a>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Service &amp; Skills <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#honors">Honors &amp; Awards</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#service">Service</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#training">Training</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
     </nav>
@@ -62,7 +93,46 @@
 
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script>
-      // Highlight active nav item as user scrolls through sections
+      // ── Dropdown toggle ──────────────────────────────────────────────────────
+      (function () {
+        var toggles = document.querySelectorAll('.nav-toggle');
+
+        toggles.forEach(function (toggle) {
+          var item = toggle.closest('.nav-has-dropdown');
+
+          toggle.addEventListener('click', function () {
+            var isOpen = this.getAttribute('aria-expanded') === 'true';
+            // Close all dropdowns first
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+            // Open this one if it was closed
+            if (!isOpen) this.setAttribute('aria-expanded', 'true');
+          });
+
+          // Escape closes the open dropdown and returns focus to the toggle
+          item.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.focus();
+            }
+          });
+        });
+
+        // Close when clicking anywhere outside the nav
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.nav-has-dropdown')) {
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+          }
+        });
+
+        // Close after a sub-link is followed
+        document.querySelectorAll('.nav-dropdown a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+          });
+        });
+      }());
+
+      // ── Active section highlight on scroll ───────────────────────────────────
       (function () {
         var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
         var targets = [];
@@ -78,9 +148,22 @@
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
+              // Clear all active states including parent toggles
               navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+              document.querySelectorAll('.nav-toggle').forEach(function (t) {
+                t.removeAttribute('aria-current');
+              });
+              // Mark the matching link active
               var match = targets.find(function (t) { return t.el === entry.target; });
-              if (match) match.link.setAttribute('aria-current', 'true');
+              if (match) {
+                match.link.setAttribute('aria-current', 'true');
+                // Also mark the parent toggle active if this link is in a dropdown
+                var dropdown = match.link.closest('.nav-dropdown');
+                if (dropdown) {
+                  var parentToggle = dropdown.closest('.nav-has-dropdown').querySelector('.nav-toggle');
+                  if (parentToggle) parentToggle.setAttribute('aria-current', 'true');
+                }
+              }
             }
           });
         }, { rootMargin: '-10% 0px -80% 0px' });

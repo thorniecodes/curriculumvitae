@@ -219,25 +219,25 @@ img {
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 2rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
-.site-nav ul {
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  white-space: nowrap;
 }
 
-.site-nav a {
-  display: block;
-  padding: 0.75rem 0.9rem;
+.nav-item {
+  position: relative;
+}
+
+// Shared styles for top-level links and dropdown toggle buttons
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
   color: rgba(219, 199, 174, 0.75);
   text-decoration: none;
   font-family: $font-sans;
@@ -245,8 +245,16 @@ img {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: color 0.15s;
   border-bottom: 2px solid transparent;
+  // Reset <button> defaults
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  cursor: pointer;
 
   &:hover {
     color: $color-sand;
@@ -261,6 +269,71 @@ img {
     color: $color-blush;
     border-bottom-color: $color-sand;
   }
+}
+
+// Dropdown caret — rotates when open
+.nav-caret {
+  font-size: 0.55rem;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.nav-has-dropdown:hover .nav-caret,
+.nav-has-dropdown:focus-within .nav-caret {
+  transform: rotate(180deg);
+}
+
+// Dropdown panel — hidden until hover or focus-within
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: $color-nav-bg;
+  border: 1px solid $color-border;
+  border-top: 2px solid $color-sand;
+  min-width: 175px;
+  list-style: none;
+  padding: 0.35rem 0;
+  margin: 0;
+  z-index: 200;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+
+  li { margin: 0; }
+
+  a {
+    display: block;
+    padding: 0.5rem 1.1rem;
+    color: rgba(219, 199, 174, 0.8);
+    text-decoration: none;
+    font-family: $font-sans;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+
+    &:hover {
+      color: $color-blush;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-sand;
+      outline-offset: -2px;
+    }
+
+    &[aria-current="true"] {
+      color: $color-blush;
+    }
+  }
+}
+
+// Show on hover or when keyboard focus is within the item
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown:focus-within .nav-dropdown {
+  display: block;
 }
 
 // ─── Main Content ─────────────────────────────────────────────────────────────
