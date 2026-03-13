@@ -18,7 +18,9 @@ layout: default
 
 ---
 
-## Library & Archives Work Experience {#experience}
+<span id="experience"></span>
+
+## Library & Archives Work Experience {#libraries}
 
 ### Public Scholarship Librarian
 *Department of Open Research · University of Oregon Libraries, Eugene, Oregon · July 2023–Present*
@@ -74,6 +76,8 @@ Teaches issues and trends in planning, developing, and managing digitization pro
 
 ---
 
+<span id="awards"></span>
+
 ## Honors & Awards {#honors}
 
 - Fulbright Alternate, Ireland, 2025
@@ -85,7 +89,7 @@ Teaches issues and trends in planning, developing, and managing digitization pro
 
 ---
 
-## Community Engagement, Volunteering, and Consulting {#community}
+## Consulting {#consulting}
 
 ### Community Research Management Consultant
 *Pride in Numbers, Oregon · 2025*
@@ -102,25 +106,10 @@ Supports geospatial analysis for community mapping in support of Seeding Justice
 
 Developed an Esri StoryMap to communicate interview findings with environmental justice-oriented nonprofits and businesses for the Upper Willamette Soil and Water Conservation District's Neighborhood Sustainability project. Transformed a white paper into an interactive, visual digital narrative that made research insights accessible to diverse audiences.
 
-### Board President
-*Local Clay, Lane County, Oregon · 2025–Present*
-
-Acts as the ceramic guild's President, overseeing leadership, decision making, and meeting management for the Local Clay Board, and working directly with Board members responsible for the organization's budget, annual pottery and ceramics showcase — Clay Fest, Clay in Education programming, and member engagement.
-
-### Ceramics Teaching Artist
-*Wildling Collaborative Arts, Eugene, Oregon · 2023–Present*
-
-Teaches youth (6–11 years old) and adult (18+ years old) hand-building ceramics workshops and classes; designs original curricula and lesson plans; organizes and ensures proper studio handling of class artwork.
-
 ### State of Oregon Film & Video Office Oral History Project Mentor
 *State of Oregon Parks & Recreation Department, Oregon Heritage · 2024–2025*
 
 Provides support to OFVO for the development and data management of oral histories documenting Oregonian experiences in the television and film industry throughout the state. Conducted primarily through the State of Oregon's Heritage MentorCorps program, which serves museums, libraries, archives, and cultural institutions.
-
-### Youth Arts Teaching Artist
-*Maude Kerns Arts Center, Eugene, Oregon · August 2022–2025*
-
-Teaches interdisciplinary and ceramics youth art classes; designs original curricula; organizes and annotates classroom artwork for proper studio handling; mentors teaching artist classroom volunteer assistants.
 
 ### City of Willamina Digital Collection Grant Writing Mentor
 *State of Oregon Parks & Recreation Department, Oregon Heritage · 2023–2024*
@@ -131,6 +120,25 @@ Provided support to the City of Willamina and Willamina History Museum to apply 
 *State of Oregon Parks & Recreation Department, Oregon Heritage · May 2024*
 
 Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon State University to over 25 Oregon-based cultural organizations, designed to equip participants with practical skills for developing low-cost oral history projects within their cultural organizations. Developed a publicly available online resource for oral history creation, management, and publishing.
+
+---
+
+## Community Service & Volunteering {#community}
+
+### Board President
+*Local Clay, Lane County, Oregon · 2025–Present*
+
+Acts as the ceramic guild's President, overseeing leadership, decision making, and meeting management for the Local Clay Board, and working directly with Board members responsible for the organization's budget, annual pottery and ceramics showcase — Clay Fest, Clay in Education programming, and member engagement.
+
+### Ceramics Teaching Artist
+*Wildling Collaborative Arts, Eugene, Oregon · 2023–Present*
+
+Teaches youth (6–11 years old) and adult (18+ years old) hand-building ceramics workshops and classes; designs original curricula and lesson plans; organizes and ensures proper studio handling of class artwork.
+
+### Youth Arts Teaching Artist
+*Maude Kerns Arts Center, Eugene, Oregon · August 2022–2025*
+
+Teaches interdisciplinary and ceramics youth art classes; designs original curricula; organizes and annotates classroom artwork for proper studio handling; mentors teaching artist classroom volunteer assistants.
 
 ### Web Team and Community Center Volunteer
 *Rural Organizing Project, Cottage Grove, Oregon · 2019–2021*
@@ -209,7 +217,7 @@ Thornhill, K., & Hayden, G. (2022). Making File Names for Digital Exhibits. In M
 
 ---
 
-## Highlighted Conference Presentations {#presentations}
+## Highlighted Conference Presentations {#talks}
 
 Thornhill, KM. Bringing Visual Arts Digital Literacy Support to Maude Kerns Art Center. Art Libraries Society of North America Annual Conference. May 2025.
 
@@ -249,7 +257,7 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 
 ---
 
-## Highlighted Professional and University Service {#service}
+## Highlighted Professional and University Service {#proservice}
 
 - United Academics Library Union Steward, 2020–Present
 - Co-Chair and Past Advisory Chair, Summer Education Institute for the Digital Stewardship of Visual Information, sponsored by the Kress Foundation and ARLIS/NA and VRA, 2023–2026
@@ -301,7 +309,7 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 
 ---
 
-## Highlighted Professional Development Training {#training}
+## Highlighted Professional Development Training {#trainings}
 
 - Civic Switchboard Institute · University of Pittsburgh · 2024
 - Visual Thinking Strategies · Online · 2024
