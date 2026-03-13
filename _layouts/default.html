@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="header-name">
+          <h1>{{ site.title }}</h1>
+          <p class="header-tagline">{{ site.description }}</p>
+        </div>
+        <div class="header-contact" aria-label="Contact information">
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Jump to CV section">
+      <div class="nav-inner">
+        <ul role="list">
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#honors">Honors</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#grants">Grants</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#presentations">Presentations</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#training">Training</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <p>Kate Thornhill, MLS &middot; Eugene, Oregon</p>
+      </div>
+    </footer>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script>
+      // Highlight active nav item as user scrolls through sections
+      (function () {
+        var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+        var targets = [];
+
+        navLinks.forEach(function (link) {
+          var id = link.getAttribute('href').slice(1);
+          var el = document.getElementById(id);
+          if (el) targets.push({ el: el, link: link });
+        });
+
+        if (!targets.length || !('IntersectionObserver' in window)) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+              var match = targets.find(function (t) { return t.el === entry.target; });
+              if (match) match.link.setAttribute('aria-current', 'true');
+            }
+          });
+        }, { rootMargin: '-10% 0px -80% 0px' });
+
+        targets.forEach(function (t) { observer.observe(t.el); });
+      }());
+    </script>
+
+  </body>
+</html>

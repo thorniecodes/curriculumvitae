@@ -1,0 +1,424 @@
+@import "fonts";
+
+// ─── Variables ────────────────────────────────────────────────────────────────
+
+$color-bg:         #ffffff;
+$color-text:       #374151;
+$color-heading:    #111827;
+$color-accent:     #1d4ed8;
+$color-muted:      #6b7280;
+$color-border:     #e5e7eb;
+$color-nav-bg:     #1e293b;
+$color-nav-text:   #cbd5e1;
+$color-nav-active: #93c5fd;
+$color-focus:      #2563eb;
+
+$font-base:        16px;
+$line-height:      1.7;
+$max-width:        900px;
+$nav-height:       2.75rem;
+
+// ─── Reset ────────────────────────────────────────────────────────────────────
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  color: $color-text;
+  font: #{$font-base}/#{$line-height} "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ─── Skip Link (Accessibility) ────────────────────────────────────────────────
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: $color-nav-bg;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 200;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid $color-focus;
+    outline-offset: 2px;
+  }
+}
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-heading;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+p, ul, ol, dl {
+  margin: 0 0 1rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+strong {
+  color: $color-heading;
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: #1e3a8a;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-focus;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: 2.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid $color-border;
+}
+
+th {
+  font-weight: 600;
+  color: $color-heading;
+}
+
+img {
+  max-width: 100%;
+}
+
+// ─── Site Header ──────────────────────────────────────────────────────────────
+
+.site-header {
+  background: $color-bg;
+  border-bottom: 3px solid $color-accent;
+  padding: 2rem 0 1.5rem;
+}
+
+.header-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.header-name {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.25rem;
+  }
+
+  .header-tagline {
+    color: $color-muted;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+.header-contact {
+  font-size: 0.875rem;
+
+  a {
+    color: $color-accent;
+  }
+}
+
+// ─── Navigation ───────────────────────────────────────────────────────────────
+
+.site-nav {
+  background: $color-nav-bg;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  white-space: nowrap;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.725rem 0.875rem;
+  color: $color-nav-text;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-nav-active;
+    outline-offset: -2px;
+  }
+
+  &[aria-current="true"] {
+    color: #ffffff;
+    border-bottom-color: $color-nav-active;
+  }
+}
+
+// ─── Main Content ─────────────────────────────────────────────────────────────
+
+main {
+  padding: 3rem 0 5rem;
+}
+
+.content-wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Section headings (h2)
+.content-wrapper h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-accent;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 0.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.75rem;
+  // Offset for sticky nav when jumping to anchor
+  scroll-margin-top: calc(#{$nav-height} + 1.5rem);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Entry headings (job title, course name, project name)
+.content-wrapper h3 {
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: $color-heading;
+  margin-top: 1.75rem;
+  margin-bottom: 0.1rem;
+  scroll-margin-top: calc(#{$nav-height} + 1.5rem);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Metadata line immediately after h3 (institution, date, etc.)
+// These are italicized paragraphs: *text*
+.content-wrapper h3 + p {
+  font-size: 0.875rem;
+  color: $color-muted;
+  margin-bottom: 0.5rem;
+}
+
+// Description text following the metadata line
+.content-wrapper h3 + p + p,
+.content-wrapper h3 + p + p + p {
+  font-size: 0.9375rem;
+  color: $color-text;
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+
+.site-footer {
+  border-top: 1px solid $color-border;
+  padding: 1.5rem 0;
+  background: $color-bg;
+}
+
+.footer-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: $color-muted;
+  font-size: 0.8rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1.5rem 0 1.25rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1.25rem;
+  }
+
+  .header-contact {
+    text-align: left;
+  }
+
+  .header-name h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-inner {
+    padding: 0 0.5rem;
+  }
+
+  main {
+    padding: 2rem 0 3rem;
+  }
+
+  .content-wrapper {
+    padding: 0 1.25rem;
+  }
+
+  .footer-inner {
+    padding: 0 1.25rem;
+  }
+}
+
+// ─── Print ────────────────────────────────────────────────────────────────────
+
+@media print {
+  .site-nav,
+  .skip-link,
+  .site-footer {
+    display: none !important;
+  }
+
+  .site-header {
+    border-bottom: 1.5pt solid #000;
+    padding: 0 0 0.75rem;
+  }
+
+  .header-name h1 {
+    font-size: 18pt;
+    color: #000;
+  }
+
+  .header-tagline,
+  .header-contact {
+    color: #000;
+    font-size: 10pt;
+  }
+
+  body {
+    font-size: 10pt;
+    color: #000;
+    line-height: 1.5;
+  }
+
+  main {
+    padding: 0.75rem 0;
+  }
+
+  .content-wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .content-wrapper h2 {
+    font-size: 7pt;
+    color: #000;
+    margin-top: 16pt;
+    border-bottom: 0.5pt solid #999;
+  }
+
+  .content-wrapper h3 {
+    font-size: 10pt;
+    color: #000;
+    margin-top: 10pt;
+  }
+
+  .content-wrapper h3 + p {
+    color: #444;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  // Show URLs for external links in print
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 7.5pt;
+    color: #555;
+    font-weight: normal;
+  }
+
+  // Don't show URL for nav links or email
+  a[href^="mailto"]::after,
+  a[href^="#"]::after {
+    content: none;
+  }
+}
