@@ -4,7 +4,7 @@ layout: default
 
 ## Education {#education}
 
-### Masters of Geography and Geospatial Information Science — Candidate
+### Master of Geography and Geospatial Information Science — Candidate
 *Oregon State University, Corvallis, Oregon · Expected June 2027*
 
 ### Master of Library and Information Science
