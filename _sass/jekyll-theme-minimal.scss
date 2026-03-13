@@ -388,6 +388,42 @@ main {
   margin-bottom: 0.6rem;
 }
 
+// Work Experience category labels (Libraries & Archives, Teaching, Consulting)
+.content-wrapper h3.work-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-sand;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 0.35rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  scroll-margin-top: calc(#{$nav-height} + 1.5rem);
+}
+
+// Entry headings within Work Experience sub-sections — same look as h3 elsewhere
+.content-wrapper h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $color-blush;
+  margin-top: 1.75rem;
+  margin-bottom: 0.1rem;
+  scroll-margin-top: calc(#{$nav-height} + 1.5rem);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Metadata line immediately after h4 (institution, dates)
+.content-wrapper h4 + p {
+  font-size: 0.9rem;
+  color: $color-sand;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
 .site-footer {

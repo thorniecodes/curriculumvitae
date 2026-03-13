@@ -18,52 +18,50 @@ layout: default
 
 ---
 
-<span id="experience"></span>
+## Work Experience {#experience}
 
-## Library & Archives Work Experience {#libraries}
+### Libraries & Archives {#libraries .work-category}
 
-### Public Scholarship Librarian
+#### Public Scholarship Librarian
 *Department of Open Research · University of Oregon Libraries, Eugene, Oregon · July 2023–Present*
 
 Has a track record in community and civic outreach, specializing in the development and implementation of community-connected scholarly projects with a focus on digital collections, archiving, and digital storytelling. Excels in the development and delivery of comprehensive public scholarship curricula and lessons for graduate and undergraduate students on both online and traditional platforms. Collaborates effectively with diverse stakeholders, including Libraries, University bodies, and external partners, securing grant funding for strategic digital initiatives. Supervises and trains graduate students, student employees, and interns, especially in cataloging, data management, and the sustainable development of public scholarship endeavors. Maintains a commitment to research, emphasizing the ethical digital stewardship of digital collections and open projects.
 
-### Digital Scholarship Librarian
+#### Digital Scholarship Librarian
 *Digital Scholarship Services · University of Oregon Libraries, Eugene, Oregon · February 2018–June 2023*
 
 Exhibited exceptional co-management skills alongside DSS leadership, oversaw internal and external digital humanities projects in various capacities, and ensured high-quality outcomes with timely delivery. Led cross-functional teams of professionals, driving successful project execution. Provided valuable assistance in managing the department's portfolio, with an emphasis on the DREAM Lab and digital humanities initiatives. Collaborated closely with library faculty to evaluate complex digital project requirements and offered technology recommendations. Delivered comprehensive trainings, workshops, and classes, emphasizing digital scholarship tools and the art of scholarly storytelling. Established partnerships for digital and data-oriented instruction sessions.
 
-### Interim Director
+#### Interim Director
 *OHSU Historical Collections & Archives · Oregon Health & Science University, Portland, Oregon · October 2017–February 2018*
 
 Demonstrated exceptional leadership and management as the head of Curatorial Services, overseeing OHSU Historical Collections & Archives, the Digital Asset Management program, and related special collections and archives public programs and outreach activities. Effectively managed a team of 8–10 staff members, comprising Library Faculty, AFSCME Union library technicians, and graduate student workers. Continued responsibilities as the Digital Repository Librarian.
 
-### Digital Repository Librarian
+#### Digital Repository Librarian
 *OHSU Historical Collections & Archives · Oregon Health & Science University, Portland, Oregon · 2016–2018*
 
 Led repository services and technology assessment, collaborating with library and external staff to prioritize support needs and system improvements. Coordinated planning, implementation, and launch of DAM services. Developed an engaged community around institutional digital collections, fostering collaboration with OHSU members. Ex-officio member of the Library's Digital Collections Committee. Created and delivered classes, workshops, and instruction sessions on repository services. Established efficient procedures for selection, intake, and access to digital collections. Maintained institutional guidelines and ensured compliance with policies. Acted as interim digital projects manager for LSTA grant-funded project *Public Health in Oregon: Discovering Historical Data*.
 
-### Digital Scholarship Librarian
+#### Digital Scholarship Librarian
 *College of Art & Design Library · Lesley University, Cambridge, Massachusetts · 2014–2016*
 
 Unit lead for Digital Scholarship and Imaging Services at the Art & Design Library, leveraged expertise in creating and managing digital collections and repositories, including visual resources, digital special collections, and institutional repositories. Supervised a team of student assistants and interns, overseeing digitization workflows and implementing digital preservation best practices. Provided consultation, technical support, digitization services, and project management for technology-rich scholarly projects within the College of Art and Design. Instructed and guided arts and humanities students and faculty on conducting research and leveraging digital methodologies and technologies. Offered insights on scholarly publishing, copyright, and fair use, while developing and delivering classes adhering to the highest standards of information literacy and primary source utilization.
 
-### Visual Resources Curator
+#### Visual Resources Curator
 *College of Art and Design Library · Lesley University Art Institute of Boston, Boston, Massachusetts · 2013–2014*
 
 Directed and coordinated digitization services for the digital image teaching collection. Supervised and managed a team of digital imaging technicians, ensuring smooth operations and high-quality digitization outcomes. Held responsibility for the development, cataloging, maintenance, preservation, and promotion of visual resource digital library collections. Coordinated efficient digital assets management workflows, employing best practices to ensure the optimal organization of digital library collections. Served as the lead instructor for visual resources primary source instruction. Provided support in reference and access services for the visual arts library.
 
----
+### Teaching {#teaching .work-category}
 
-## Courses Taught {#teaching}
-
-### University of Oregon
+#### University of Oregon
 *College of Arts and Sciences — Digital Humanities Minor and Data Science Cultural Analytics Concentration Undergraduate Programs*
 
 **LIB350M/DSCI350M: Humanities Research Data Management** · Instructor of Record · First taught Spring 2023, continues to teach.
 
 Created the course's original curriculum. Offers students both theoretical and practical experience in collecting, processing, archiving, and publishing humanities data, encompassing various formats such as images, video, sound, text, and maps, sourced from galleries, libraries, archives, and museums (GLAMs). With a primary focus on building thematic digital collections, researchers and students gain comprehensive knowledge of digital methodologies, with an emphasis on the technical, legal, ethical, and social aspects of working with humanities research data throughout its curation lifecycle. The curriculum encompasses hands-on activities involving finding, assessing, organizing, and reformatting data, as well as creating and remediating descriptive metadata. Students also gain proficiency in evaluating copyright and licensing considerations, developing data management plans in accordance with National Endowment for the Humanities standards, and sharing thematic research digital collections using GitHub and the open-source platform CollectionBuilder.
 
-### University of Denver
+#### University of Denver
 *Morgridge College of Education — Online Master of Library and Information Science Program*
 
 **LIS 4810 Digital Libraries** · Adjunct Professor · First taught Spring 2020, continues to teach.
@@ -73,6 +71,38 @@ Teaches the theoretical foundation for the study of digital libraries, discussin
 **LIS 4820 Digitization** · Adjunct Professor · First taught Fall 2020, does not continue to teach.
 
 Teaches issues and trends in planning, developing, and managing digitization projects at libraries, archives, and museums. Instructs students on the applications of the Federal Agencies Digitization Guidelines Initiatives, copyright and licensing considerations, ethics and privacy considerations, and digital technologies that support the digitization and preservation of various materials such as photographs, oral histories, text-based materials, and audio-visual materials. Provides coaching to students on the use of image editing and text editing tools, Fixity, and the development of a digitization project proposal.
+
+### Consulting {#consulting .work-category}
+
+#### Community Research Management Consultant
+*Pride in Numbers, Oregon · 2025*
+
+Provided support to PIN for Oregon's largest Two-Spirit and LGBTQIA+ research project. This independent, community-led initiative prioritized real stories from community members and utilized rigorous community engagement standards to ensure ethical data collection, management, and technology practices aligned with community needs. Taught research team members how to set up their research technology infrastructures to conduct interviews, collect artwork, and manage survey results.
+
+#### Environmental Justice Geographic Information Science Analysis & Consultant
+*Seeding Justice, Portland, Oregon · 2025*
+
+Supports geospatial analysis for community mapping in support of Seeding Justice's Climate Protection Program by showcasing environmental justice businesses, non-profits, and community activist groups across Oregon focused on renewable energy, energy efficiency, and transportation decarbonization projects.
+
+#### Environmental Justice Digital Storytelling Specialist & Consultant
+*Upper Willamette Soil & Water Conservation District · 2025*
+
+Developed an Esri StoryMap to communicate interview findings with environmental justice-oriented nonprofits and businesses for the Upper Willamette Soil and Water Conservation District's Neighborhood Sustainability project. Transformed a white paper into an interactive, visual digital narrative that made research insights accessible to diverse audiences.
+
+#### State of Oregon Film & Video Office Oral History Project Mentor
+*State of Oregon Parks & Recreation Department, Oregon Heritage · 2024–2025*
+
+Provides support to OFVO for the development and data management of oral histories documenting Oregonian experiences in the television and film industry throughout the state. Conducted primarily through the State of Oregon's Heritage MentorCorps program, which serves museums, libraries, archives, and cultural institutions.
+
+#### City of Willamina Digital Collection Grant Writing Mentor
+*State of Oregon Parks & Recreation Department, Oregon Heritage · 2023–2024*
+
+Provided support to the City of Willamina and Willamina History Museum to apply for grant funding for historical newspaper digitization and improved internet access, enabling museum users to conduct historical research. The city and museum were awarded an $8,000 grant as a result of this collaboration, conducted primarily through the State of Oregon's Heritage MentorCorps program.
+
+#### Doing Oral History on a Shoestring Workshop Instructor
+*State of Oregon Parks & Recreation Department, Oregon Heritage · May 2024*
+
+Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon State University to over 25 Oregon-based cultural organizations, designed to equip participants with practical skills for developing low-cost oral history projects within their cultural organizations. Developed a publicly available online resource for oral history creation, management, and publishing.
 
 ---
 
@@ -86,40 +116,6 @@ Teaches issues and trends in planning, developing, and managing digitization pro
 - United Academics of the University of Oregon Strong Voice Award, 2021
 - Digital Humanities Summer Institute Travel Scholarship, DHSI 2019
 - Visual Resources Association National Conference Tansey Travel Award, 2017
-
----
-
-## Consulting {#consulting}
-
-### Community Research Management Consultant
-*Pride in Numbers, Oregon · 2025*
-
-Provided support to PIN for Oregon's largest Two-Spirit and LGBTQIA+ research project. This independent, community-led initiative prioritized real stories from community members and utilized rigorous community engagement standards to ensure ethical data collection, management, and technology practices aligned with community needs. Taught research team members how to set up their research technology infrastructures to conduct interviews, collect artwork, and manage survey results.
-
-### Environmental Justice Geographic Information Science Analysis & Consultant
-*Seeding Justice, Portland, Oregon · 2025*
-
-Supports geospatial analysis for community mapping in support of Seeding Justice's Climate Protection Program by showcasing environmental justice businesses, non-profits, and community activist groups across Oregon focused on renewable energy, energy efficiency, and transportation decarbonization projects.
-
-### Environmental Justice Digital Storytelling Specialist & Consultant
-*Upper Willamette Soil & Water Conservation District · 2025*
-
-Developed an Esri StoryMap to communicate interview findings with environmental justice-oriented nonprofits and businesses for the Upper Willamette Soil and Water Conservation District's Neighborhood Sustainability project. Transformed a white paper into an interactive, visual digital narrative that made research insights accessible to diverse audiences.
-
-### State of Oregon Film & Video Office Oral History Project Mentor
-*State of Oregon Parks & Recreation Department, Oregon Heritage · 2024–2025*
-
-Provides support to OFVO for the development and data management of oral histories documenting Oregonian experiences in the television and film industry throughout the state. Conducted primarily through the State of Oregon's Heritage MentorCorps program, which serves museums, libraries, archives, and cultural institutions.
-
-### City of Willamina Digital Collection Grant Writing Mentor
-*State of Oregon Parks & Recreation Department, Oregon Heritage · 2023–2024*
-
-Provided support to the City of Willamina and Willamina History Museum to apply for grant funding for historical newspaper digitization and improved internet access, enabling museum users to conduct historical research. The city and museum were awarded an $8,000 grant as a result of this collaboration, conducted primarily through the State of Oregon's Heritage MentorCorps program.
-
-### Doing Oral History on a Shoestring Workshop Instructor
-*State of Oregon Parks & Recreation Department, Oregon Heritage · May 2024*
-
-Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon State University to over 25 Oregon-based cultural organizations, designed to equip participants with practical skills for developing low-cost oral history projects within their cultural organizations. Developed a publicly available online resource for oral history creation, management, and publishing.
 
 ---
 
