@@ -2,21 +2,20 @@
 
 // ─── Variables ────────────────────────────────────────────────────────────────
 
-$color-bg:         rgb(219, 204, 181);   // warm parchment
-$color-text:       rgb(80, 49, 47);      // dark warm brown
-$color-heading:    rgb(80, 49, 47);
-$color-burgundy:   rgb(116, 50, 51);     // deep burgundy
-$color-gold:       rgb(186, 142, 105);   // warm gold
-$color-border:     rgba(116, 50, 51, 0.2);
-$color-border-strong: rgba(116, 50, 51, 0.45);
+$color-bg:       rgb(7, 54, 48);       // deep forest green
+$color-text:     rgb(249, 248, 246);   // near white
+$color-sand:     rgb(219, 199, 174);   // warm sand
+$color-blush:    rgb(238, 225, 216);   // light blush
+$color-nav-bg:   rgb(4, 38, 33);       // darker green for nav
+$color-border:   rgba(219, 199, 174, 0.2);
+$color-border-strong: rgba(219, 199, 174, 0.4);
+$color-focus:    rgb(219, 199, 174);
 
-$font-script:      'Sacramento', cursive;
-$font-serif:       'Alice', Georgia, serif;
+$font-serif:     'Spectral', Georgia, serif;
+$font-sans:      'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$font-base:        17px;
-$line-height:      1.75;
-$max-width:        900px;
-$nav-height:       2.75rem;
+$max-width:      900px;
+$nav-height:     2.75rem;
 
 // ─── Reset ────────────────────────────────────────────────────────────────────
 
@@ -27,7 +26,9 @@ $nav-height:       2.75rem;
 body {
   background: $color-bg;
   color: $color-text;
-  font: #{$font-base}/#{$line-height} $font-serif;
+  font-family: $font-sans;
+  font-size: 16px;
+  line-height: 1.75;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -39,19 +40,19 @@ body {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: $color-burgundy;
-  color: $color-bg;
+  background: $color-nav-bg;
+  color: $color-text;
   padding: 0.5rem 1rem;
   border-radius: 0 0 4px 4px;
+  font-family: $font-sans;
   font-size: 0.875rem;
-  font-weight: bold;
-  font-family: $font-serif;
+  font-weight: 700;
   text-decoration: none;
   z-index: 200;
 
   &:focus {
     top: 0;
-    outline: 3px solid $color-gold;
+    outline: 3px solid $color-sand;
     outline-offset: 2px;
   }
 }
@@ -59,15 +60,23 @@ body {
 // ─── Typography ───────────────────────────────────────────────────────────────
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-serif;
-  color: $color-heading;
+  font-family: $font-sans;
+  font-weight: 700;
+  color: $color-text;
   line-height: 1.3;
-  font-weight: bold;
   margin: 0 0 0.5rem;
 }
 
+// Minimum 18px for all headings
+h2 { font-size: 1.125rem; }  // 18px
+h3 { font-size: 1.25rem; }   // 20px
+h4 { font-size: 1.125rem; }  // 18px
+h5 { font-size: 1.125rem; }  // 18px
+h6 { font-size: 1.125rem; }  // 18px
+
 p, ul, ol, dl {
   margin: 0 0 1rem;
+  font-size: 1rem; // 16px
 }
 
 ul, ol {
@@ -76,11 +85,12 @@ ul, ol {
 
 li {
   margin-bottom: 0.3rem;
+  font-size: 1rem; // 16px
 }
 
 strong {
-  color: $color-heading;
-  font-weight: bold;
+  font-weight: 700;
+  color: $color-blush;
 }
 
 em {
@@ -88,18 +98,18 @@ em {
 }
 
 a {
-  color: $color-burgundy;
+  color: $color-sand;
   text-decoration: underline;
-  text-decoration-color: rgba(116, 50, 51, 0.45);
+  text-decoration-color: rgba(219, 199, 174, 0.5);
   text-underline-offset: 3px;
 
   &:hover {
-    color: darken($color-burgundy, 10%);
-    text-decoration-color: $color-burgundy;
+    color: $color-blush;
+    text-decoration-color: $color-blush;
   }
 
   &:focus-visible {
-    outline: 3px solid $color-gold;
+    outline: 3px solid $color-sand;
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -115,7 +125,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 th, td {
@@ -125,8 +135,8 @@ th, td {
 }
 
 th {
-  font-weight: bold;
-  color: $color-heading;
+  font-weight: 700;
+  color: $color-sand;
 }
 
 img {
@@ -138,7 +148,7 @@ img {
 .site-header {
   background: $color-bg;
   border-bottom: 1px solid $color-border-strong;
-  padding: 2.5rem 0 2rem;
+  padding: 3rem 0 2.5rem;
 }
 
 .header-inner {
@@ -147,47 +157,63 @@ img {
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1.5rem;
 }
 
 .header-name {
   h1 {
-    font-family: $font-script;
-    font-weight: normal; // Sacramento looks best at normal weight
-    font-size: 3.75rem;
-    line-height: 1.15;
-    color: $color-burgundy;
-    letter-spacing: 0.01em;
-    margin: 0 0 0.1rem;
+    font-family: $font-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 1.1;
+    color: $color-blush;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4rem;
   }
 
   .header-tagline {
-    color: $color-gold;
+    color: $color-sand;
     font-size: 0.875rem;
     letter-spacing: 0.04em;
-    margin: 0;
+    margin: 0 0 0.75rem;
   }
 }
 
 .header-contact {
   font-size: 0.875rem;
-  color: $color-text;
+  color: $color-sand;
 
   a {
-    color: $color-burgundy;
+    color: $color-sand;
   }
+}
+
+// ─── Profile Photo ────────────────────────────────────────────────────────────
+
+.header-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid $color-sand;
+  display: block;
 }
 
 // ─── Navigation ───────────────────────────────────────────────────────────────
 
 .site-nav {
-  background: $color-burgundy;
+  background: $color-nav-bg;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(80, 49, 47, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .nav-inner {
@@ -213,28 +239,28 @@ img {
 .site-nav a {
   display: block;
   padding: 0.75rem 0.9rem;
-  color: rgba(219, 204, 181, 0.85);
+  color: rgba(219, 199, 174, 0.75);
   text-decoration: none;
-  font-family: $font-serif;
+  font-family: $font-sans;
   font-size: 0.72rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 0.15s;
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: $color-bg;
+    color: $color-sand;
   }
 
   &:focus-visible {
-    outline: 2px solid $color-gold;
+    outline: 2px solid $color-sand;
     outline-offset: -2px;
   }
 
   &[aria-current="true"] {
-    color: $color-bg;
-    border-bottom-color: $color-gold;
+    color: $color-blush;
+    border-bottom-color: $color-sand;
   }
 }
 
@@ -250,13 +276,13 @@ main {
   padding: 0 2rem;
 }
 
-// Section headings (h2) — small-caps labels in burgundy
+// Section headings (h2) — 18px, uppercase, sand color
 .content-wrapper h2 {
-  font-size: 0.68rem;
-  font-weight: bold;
-  letter-spacing: 0.18em;
+  font-size: 1.125rem; // 18px
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $color-burgundy;
+  color: $color-sand;
   border-bottom: 1px solid $color-border-strong;
   padding-bottom: 0.5rem;
   margin-top: 3.5rem;
@@ -268,12 +294,12 @@ main {
   }
 }
 
-// Entry headings (job titles, degree names, project names)
+// Entry headings (job titles, degrees, project names) — 20px
 .content-wrapper h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  color: $color-heading;
-  margin-top: 1.75rem;
+  font-size: 1.25rem; // 20px
+  font-weight: 700;
+  color: $color-blush;
+  margin-top: 2rem;
   margin-bottom: 0.1rem;
   scroll-margin-top: calc(#{$nav-height} + 1.5rem);
 
@@ -282,12 +308,12 @@ main {
   }
 }
 
-// Metadata line immediately after h3 (institution, date) — italic, muted gold
+// Metadata line immediately after h3 (institution, dates) — muted sand
 .content-wrapper h3 + p {
-  font-size: 0.875rem;
-  color: $color-gold;
+  font-size: 0.9rem;
+  color: $color-sand;
   font-style: italic;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
@@ -303,7 +329,7 @@ main {
   margin: 0 auto;
   padding: 0 2rem;
   text-align: center;
-  color: $color-gold;
+  color: $color-sand;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
 
@@ -316,21 +342,17 @@ main {
 
 @media (max-width: 640px) {
   .site-header {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1.75rem;
   }
 
   .header-inner {
-    flex-direction: column;
+    flex-direction: column-reverse; // photo above name on mobile
     align-items: flex-start;
     padding: 0 1.25rem;
   }
 
-  .header-contact {
-    text-align: left;
-  }
-
   .header-name h1 {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
 
   .nav-inner {
@@ -361,8 +383,8 @@ main {
 
   body {
     background: #fff;
-    font-size: 10pt;
     color: #000;
+    font-size: 10pt;
     line-height: 1.5;
   }
 
@@ -372,14 +394,21 @@ main {
   }
 
   .header-name h1 {
-    font-size: 24pt;
+    font-size: 22pt;
     color: #000;
+    font-weight: 300;
   }
 
   .header-tagline,
   .header-contact {
     color: #333;
     font-size: 9.5pt;
+  }
+
+  .profile-photo {
+    width: 72pt;
+    height: 72pt;
+    border: 1pt solid #aaa;
   }
 
   main {
@@ -392,21 +421,20 @@ main {
   }
 
   .content-wrapper h2 {
-    font-size: 7pt;
+    font-size: 9pt;
     color: #000;
     border-color: #999;
     margin-top: 16pt;
   }
 
   .content-wrapper h3 {
-    font-size: 10pt;
+    font-size: 11pt;
     color: #000;
     margin-top: 10pt;
   }
 
   .content-wrapper h3 + p {
     color: #444;
-    font-style: italic;
   }
 
   a {

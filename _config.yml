@@ -3,3 +3,6 @@ description: Public Scholarship Librarian · Digital Humanities · Eugene, Orego
 email: thornhik@oregonstate.edu
 show_downloads: false
 theme: jekyll-theme-minimal
+
+# Profile photo: add your image to assets/img/ and set the path below
+# photo: /assets/img/profile.jpg
