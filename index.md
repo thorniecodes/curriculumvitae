@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div class="section-card" markdown="1">
+
 ## Education {#education}
 
 ### Master of Geography and Geospatial Information Science — Candidate
@@ -16,7 +18,9 @@ layout: default
 ### Bachelor of Fine Arts: Photography
 *UMass Dartmouth, North Dartmouth, Massachusetts · 2009*
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Work Experience {#experience}
 
@@ -104,9 +108,9 @@ Provided support to the City of Willamina and Willamina History Museum to apply 
 
 Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon State University to over 25 Oregon-based cultural organizations, designed to equip participants with practical skills for developing low-cost oral history projects within their cultural organizations. Developed a publicly available online resource for oral history creation, management, and publishing.
 
----
+</div>
 
-<span id="awards"></span>
+<div class="section-card" markdown="1">
 
 ## Honors & Awards {#honors}
 
@@ -117,7 +121,9 @@ Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon
 - Digital Humanities Summer Institute Travel Scholarship, DHSI 2019
 - Visual Resources Association National Conference Tansey Travel Award, 2017
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Community Service & Volunteering {#community}
 
@@ -146,7 +152,9 @@ Supported ROP's website content management and development in collaboration with
 
 Demonstrated expertise in project design following best practices for conducting interviews over Zoom. Supervised and recruited volunteers, both from the LIS field and the community, to establish guidelines for transcription, digital collection workflows, and descriptive metadata standards. Ensured the preservation of sound recordings and documents using recommended formats and established a community archive metadata application profile aligned with Northwest Digital Heritage standards for future DPLA aggregation.
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Creative Scholarly Portfolio — Featured Works {#portfolio}
 
@@ -159,7 +167,9 @@ As the Public Scholarship Librarian at the University of Oregon Libraries, I hav
 
 A bilingual (English/Spanish) place-based digital narrative that documents the devastating impact of Hurricane María on Puerto Rico in September 2017 and the community-driven solidarity efforts that emerged in its aftermath. The project weaves together oral history interviews, first-person testimonies, photographs, video clips, government data, and scholarly research to tell a multifaceted story of disaster, displacement, government failure, and grassroots resilience. It contextualizes the hurricane within Puerto Rico's broader social, political, and economic struggles — including its colonial relationship with the United States, years of mass migration, and the ongoing climate crisis — while centering the voices of community members from municipalities like Morovis, Utuado, Mayagüez, and Maricao. The narrative also incorporates the author's personal experience surviving the hurricane in Cidra, creating an intimate reflection on how archives and documentation activate individual and collective memory.
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Sponsored Projects {#grants}
 
@@ -193,7 +203,9 @@ Key personnel for coaching and training post-doctoral scholar in digital project
 **Public Health in Oregon: Accessing Historical Data for Scientific Discovery** — State Library of Oregon's Library Services and Technology Act Program
 Interim Digital Project Manager. [$56,849 · Oregon Health and Science University · 2016–2017]
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Highlighted Publications {#publications}
 
@@ -211,7 +223,9 @@ Thornhill, K., Peterson, E., & Shaffer, A. (2022). Union Stewardship: A Space fo
 
 Thornhill, K., & Hayden, G. (2022). Making File Names for Digital Exhibits. In M. Brodsky & K. Getz (Eds.), *ACRL Data Literacy Cookbook.* American College and Research Libraries.
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Highlighted Conference Presentations {#talks}
 
@@ -251,7 +265,9 @@ Thornhill, KM. Scope Drifting Toward Data Management and Institutional Collectio
 
 Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professionals. ArLiSNAP/VREPS Virtual Conference: Visualizing the Future: New Perspectives in Art Librarianship. January 15, 2015.
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Highlighted Professional and University Service {#proservice}
 
@@ -271,7 +287,9 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 - Chair, Digital Library Federation User Experience Working Group, 2017–2018
 - Social Media Coordinator, Visual Resources Association, 2016
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Technology Skillset {#skills}
 
@@ -303,7 +321,9 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 - **Publishing** — CollectionBuilder, Omeka, ContentDM, Samvera/Hydra, Merlin, Digital Commons, PubPub
 - **Digital Storage** — SharePoint & OneDrive, Google Drive, Dropbox, Proton Drive, Box
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## Highlighted Professional Development Training {#trainings}
 
@@ -314,3 +334,5 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 - Train the Trainer, Transparent Design for Librarians · Pacific University (funded by State Library of Oregon) · 2020
 - Oral History Training · Science History Institute, Philadelphia, PA · 2020
 - Digital Humanities Summer Institute · University of Victoria, BC · 2019
+
+</div>

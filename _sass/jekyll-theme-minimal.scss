@@ -11,8 +11,8 @@ $color-border:   rgba(219, 199, 174, 0.2);
 $color-border-strong: rgba(219, 199, 174, 0.4);
 $color-focus:    rgb(219, 199, 174);
 
-$font-serif:     'Spectral', Georgia, serif;
-$font-sans:      'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif:     'Poppins', 'Helvetica Neue', sans-serif;
+$font-sans:      'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $max-width:      900px;
 $nav-height:     2.75rem;
@@ -339,13 +339,23 @@ img {
 // ─── Main Content ─────────────────────────────────────────────────────────────
 
 main {
-  padding: 3rem 0 5rem;
+  background: $color-nav-bg;
+  padding: 2rem 0 4rem;
 }
 
 .content-wrapper {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+}
+
+// Section cards — each content section floats as a card on the darker main background
+.section-card {
+  background: $color-bg;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 // Section headings (h2) — 18px, uppercase, sand color
@@ -357,13 +367,11 @@ main {
   color: $color-sand;
   border-bottom: 1px solid $color-border-strong;
   padding-bottom: 0.5rem;
-  margin-top: 3.5rem;
+  margin-top: 0;
   margin-bottom: 1.75rem;
-  scroll-margin-top: calc(#{$nav-height} + 1.5rem);
-
-  &:first-child {
-    margin-top: 0;
-  }
+  // scroll-margin-top accounts for sticky nav + card top padding so the card
+  // border-radius is visible when navigating to a section anchor
+  scroll-margin-top: calc(#{$nav-height} + 3.5rem);
 }
 
 // Entry headings (job titles, degrees, project names) — 20px
@@ -468,11 +476,16 @@ main {
   }
 
   main {
-    padding: 2rem 0 3rem;
+    padding: 1rem 0 3rem;
   }
 
   .content-wrapper {
-    padding: 0 1.25rem;
+    padding: 0 0.75rem;
+  }
+
+  .section-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 8px;
   }
 
   .footer-inner {
