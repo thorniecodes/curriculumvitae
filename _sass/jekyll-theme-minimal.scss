@@ -336,6 +336,34 @@ img {
   display: block;
 }
 
+// Hamburger button — hidden on desktop
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.6rem 0.5rem;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .hamburger-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $color-sand;
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  &[aria-expanded="true"] {
+    .hamburger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
 // ─── Main Content ─────────────────────────────────────────────────────────────
 
 main {
@@ -471,8 +499,50 @@ main {
     font-size: 2.25rem;
   }
 
+  // Nav: hamburger row + collapsible list below
   .nav-inner {
-    padding: 0 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 0.75rem;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  // Dropdowns: static, always visible inline when nav is open
+  .nav-dropdown {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid $color-border;
+    margin-left: 1.25rem;
+    min-width: unset;
+    padding: 0.1rem 0;
+  }
+
+  // Suppress hover-based dropdown trigger on mobile
+  .nav-has-dropdown:hover .nav-dropdown,
+  .nav-has-dropdown:focus-within .nav-dropdown {
+    display: block;
+  }
+
+  // Hide caret — dropdowns always expanded on mobile
+  .nav-caret {
+    display: none;
   }
 
   main {
