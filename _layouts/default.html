@@ -68,9 +68,8 @@
             <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">Grants & Awards <span class="nav-caret" aria-hidden="true">&#9662;</span>
             </button>
             <ul class="nav-dropdown" role="list">
-              <li><a href="#honors">Honors</a></li>
+              <li><a href="#honors">Honors &amp; Awards</a></li>
               <li><a href="#grants">Grants</a></li>
-              <li><a href="#honors">Awards</a></li>
             </ul>
           </li>
 
@@ -190,12 +189,12 @@
               // Mark the matching link active
               var match = targets.find(function (t) { return t.el === entry.target; });
               if (match) {
-                match.link.setAttribute('aria-current', 'true');
+                match.link.setAttribute('aria-current', 'location');
                 // Also mark the parent toggle active if this link is in a dropdown
                 var dropdown = match.link.closest('.nav-dropdown');
                 if (dropdown) {
                   var parentToggle = dropdown.closest('.nav-has-dropdown').querySelector('.nav-toggle');
-                  if (parentToggle) parentToggle.setAttribute('aria-current', 'true');
+                  if (parentToggle) parentToggle.setAttribute('aria-current', 'location');
                 }
               }
             }

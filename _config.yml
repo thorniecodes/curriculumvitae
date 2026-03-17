@@ -3,6 +3,8 @@ description: Geography & Geospatial Science Graduate Student · Digital Humaniti
 email: thornhik@oregonstate.edu
 show_downloads: false
 theme: jekyll-theme-minimal
+baseurl: "/curriculumvitae"
+url: "https://thorniecodes.github.io"
 
 # Profile photo
 photo: /assets/img/profile.png
