@@ -4,7 +4,7 @@ layout: default
 
 <div class="section-card" markdown="1">
 
-## Education {#education}
+<h2 id="education">Education</h2>
 
 ### Master of Geography and Geospatial Information Science — Candidate
 *Oregon State University, Corvallis, Oregon · Expected June 2027*
@@ -22,9 +22,9 @@ layout: default
 
 <div class="section-card" markdown="1">
 
-## Work Experience {#experience}
+<h2 id="experience">Work Experience</h2>
 
-### Libraries & Archives {#libraries .work-category}
+<h3 id="libraries" class="work-category">Libraries &amp; Archives</h3>
 
 #### Public Scholarship Librarian
 *Department of Open Research · University of Oregon Libraries, Eugene, Oregon · July 2023–Present*
@@ -56,7 +56,7 @@ Unit lead for Digital Scholarship and Imaging Services at the Art & Design Libra
 
 Directed and coordinated digitization services for the digital image teaching collection. Supervised and managed a team of digital imaging technicians, ensuring smooth operations and high-quality digitization outcomes. Held responsibility for the development, cataloging, maintenance, preservation, and promotion of visual resource digital library collections. Coordinated efficient digital assets management workflows, employing best practices to ensure the optimal organization of digital library collections. Served as the lead instructor for visual resources primary source instruction. Provided support in reference and access services for the visual arts library.
 
-### Teaching {#teaching .work-category}
+<h3 id="teaching" class="work-category">Teaching</h3>
 
 #### University of Oregon
 *College of Arts and Sciences — Digital Humanities Minor and Data Science Cultural Analytics Concentration Undergraduate Programs*
@@ -76,7 +76,7 @@ Teaches the theoretical foundation for the study of digital libraries, discussin
 
 Teaches issues and trends in planning, developing, and managing digitization projects at libraries, archives, and museums. Instructs students on the applications of the Federal Agencies Digitization Guidelines Initiatives, copyright and licensing considerations, ethics and privacy considerations, and digital technologies that support the digitization and preservation of various materials such as photographs, oral histories, text-based materials, and audio-visual materials. Provides coaching to students on the use of image editing and text editing tools, Fixity, and the development of a digitization project proposal.
 
-### Consulting {#consulting .work-category}
+<h3 id="consulting" class="work-category">Consulting</h3>
 
 #### Community Research Management Consultant
 *Pride in Numbers, Oregon · 2025*
@@ -112,7 +112,7 @@ Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon
 
 <div class="section-card" markdown="1">
 
-## Honors & Awards {#honors}
+<h2 id="honors">Honors &amp; Awards</h2>
 
 - Fulbright Alternate, Ireland, 2025
 - Latin American Studies Association, Archives, Libraries, and Digital Scholarship Section's Best Public Project, Honorable Mention, 2022
@@ -125,7 +125,7 @@ Taught a 3-hour hands-on workshop in collaboration with an archivist from Oregon
 
 <div class="section-card" markdown="1">
 
-## Community Service & Volunteering {#community}
+<h2 id="community">Community Service &amp; Volunteering</h2>
 
 ### Board President
 *Local Clay, Lane County, Oregon · 2025–Present*
@@ -156,7 +156,7 @@ Demonstrated expertise in project design following best practices for conducting
 
 <div class="section-card" markdown="1">
 
-## Creative Scholarly Portfolio — Featured Works {#portfolio}
+<h2 id="portfolio">Creative Scholarly Portfolio — Featured Works</h2>
 
 ### Public Scholarship Work Portfolio at the University of Oregon
 [blogs.uoregon.edu/publicscholarshipinitiatives](https://blogs.uoregon.edu/publicscholarshipinitiatives/)
@@ -175,7 +175,7 @@ A bilingual (English/Spanish) place-based digital narrative that documents the d
 
 <div class="section-card" markdown="1">
 
-## Sponsored Projects {#grants}
+<h2 id="grants">Sponsored Projects</h2>
 
 **Mobilizing Mesoamerican Indigenous Knowledge for Health and Socio-Environmental Justice** — Andrew W. Mellon Foundation
 Co-Principal Investigator for research data management and digital storytelling. [$575,000 · University of Oregon · 2025–2028]
@@ -214,7 +214,7 @@ Interim Digital Project Manager. [$56,849 · Oregon Health and Science Universit
 
 <div class="section-card" markdown="1">
 
-## Highlighted Publications {#publications}
+<h2 id="publications">Highlighted Publications</h2>
 
 Thornhill, K., & Martinez, M. (2024). Keeping Up With… Public Scholarship. *American College and Research Libraries Keeping Up With… Series.* [ala.org/acrl/publications/keeping_up_with/public_scholarship](https://www.ala.org/acrl/publications/keeping_up_with/public_scholarship)
 
@@ -234,7 +234,7 @@ Thornhill, K., & Hayden, G. (2022). Making File Names for Digital Exhibits. In M
 
 <div class="section-card" markdown="1">
 
-## Highlighted Conference Presentations {#talks}
+<h2 id="talks">Highlighted Conference Presentations</h2>
 
 Thornhill, KM. Bringing Visual Arts Digital Literacy Support to Maude Kerns Art Center. Art Libraries Society of North America Annual Conference. May 2025.
 
@@ -276,7 +276,7 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 
 <div class="section-card" markdown="1">
 
-## Highlighted Professional and University Service {#proservice}
+<h2 id="proservice">Highlighted Professional and University Service</h2>
 
 - United Academics Library Union Steward, 2020–Present
 - Co-Chair and Past Advisory Chair, Summer Education Institute for the Digital Stewardship of Visual Information, sponsored by the Kress Foundation and ARLIS/NA and VRA, 2023–2026
@@ -298,7 +298,7 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 
 <div class="section-card" markdown="1">
 
-## Technology Skillset {#skills}
+<h2 id="skills">Technology Skillset</h2>
 
 ### Website Publishing Platforms
 - GitHub Pages/Jekyll
@@ -332,7 +332,7 @@ Thornhill, KM. Visual Arts Data Management: A Role for Visual Resources Professi
 
 <div class="section-card" markdown="1">
 
-## Highlighted Professional Development Training {#trainings}
+<h2 id="trainings">Highlighted Professional Development Training</h2>
 
 - Civic Switchboard Institute · University of Pittsburgh · 2024
 - Visual Thinking Strategies · Online · 2024
