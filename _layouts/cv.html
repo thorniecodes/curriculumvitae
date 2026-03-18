@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        {% if site.photo %}
+        <div class="header-photo">
+          <img src="{{ site.photo | relative_url }}" alt="Portrait of {{ site.title }}" class="profile-photo">
+        </div>
+        {% endif %}
+        <div class="header-name">
+          <h1><a href="{{ '/' | relative_url }}" class="header-home-link">{{ site.title }}</a></h1>
+          <p class="header-tagline">{{ site.description }}</p>
+          <div class="header-contact" aria-label="Contact information">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Jump to CV section">
+      <div class="nav-inner">
+        <button class="nav-hamburger" aria-expanded="false" aria-controls="nav-list" aria-label="Open navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <ul class="nav-list" id="nav-list" role="list">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Work Experience <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#libraries">Libraries &amp; Archives</a></li>
+              <li><a href="#teaching">Teaching</a></li>
+              <li><a href="#consulting">Consulting</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Scholarship <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#talks">Talks</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">Grants &amp; Awards <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#honors">Honors &amp; Awards</a></li>
+              <li><a href="#grants">Grants</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true">
+              Service &amp; Skills <span class="nav-caret" aria-hidden="true">&#9662;</span>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="#community">Community Service</a></li>
+              <li><a href="#proservice">Professional Service</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#trainings">Trainings</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <p>Kate Thornhill, MLS &middot; Eugene, Oregon</p>
+      </div>
+    </footer>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script>
+      // ── Hamburger toggle (mobile) ─────────────────────────────────────────────
+      (function () {
+        var hamburger = document.querySelector('.nav-hamburger');
+        var navList   = document.getElementById('nav-list');
+        if (!hamburger || !navList) return;
+
+        hamburger.addEventListener('click', function () {
+          var isOpen = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!isOpen));
+          this.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+          navList.classList.toggle('is-open', !isOpen);
+        });
+
+        navList.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open navigation menu');
+            navList.classList.remove('is-open');
+          });
+        });
+      }());
+
+      // ── Dropdown toggle ──────────────────────────────────────────────────────
+      (function () {
+        var toggles = document.querySelectorAll('.nav-toggle');
+
+        toggles.forEach(function (toggle) {
+          var item = toggle.closest('.nav-has-dropdown');
+
+          toggle.addEventListener('click', function () {
+            var isOpen = this.getAttribute('aria-expanded') === 'true';
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+            if (!isOpen) this.setAttribute('aria-expanded', 'true');
+          });
+
+          item.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.focus();
+            }
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.nav-has-dropdown')) {
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+          }
+        });
+
+        document.querySelectorAll('.nav-dropdown a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            toggles.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+          });
+        });
+      }());
+
+      // ── Active section highlight on scroll ───────────────────────────────────
+      (function () {
+        var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+        var targets = [];
+
+        navLinks.forEach(function (link) {
+          var id = link.getAttribute('href').slice(1);
+          var el = document.getElementById(id);
+          if (el) targets.push({ el: el, link: link });
+        });
+
+        if (!targets.length || !('IntersectionObserver' in window)) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+              document.querySelectorAll('.nav-toggle').forEach(function (t) {
+                t.removeAttribute('aria-current');
+              });
+              var match = targets.find(function (t) { return t.el === entry.target; });
+              if (match) {
+                match.link.setAttribute('aria-current', 'location');
+                var dropdown = match.link.closest('.nav-dropdown');
+                if (dropdown) {
+                  var parentToggle = dropdown.closest('.nav-has-dropdown').querySelector('.nav-toggle');
+                  if (parentToggle) parentToggle.setAttribute('aria-current', 'location');
+                }
+              }
+            }
+          });
+        }, { rootMargin: '-10% 0px -80% 0px' });
+
+        targets.forEach(function (t) { observer.observe(t.el); });
+      }());
+    </script>
+
+  </body>
+</html>

@@ -8,30 +8,33 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     {% include head-custom.html %}
   </head>
-  <body>
+  <body class="home-page">
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <nav class="site-nav" aria-label="Site navigation">
       <div class="nav-inner">
-        <a class="nav-brand" href="{{ '/' | relative_url }}">Kate Thornhill</a>
-        <button class="nav-hamburger" aria-expanded="false" aria-controls="page-nav-list" aria-label="Open navigation menu">
+        <button class="nav-hamburger" aria-expanded="false" aria-controls="home-nav-list" aria-label="Open navigation menu">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
         </button>
-        <ul class="nav-list" id="page-nav-list" role="list">
-          <li class="nav-item"><a class="nav-link" href="{{ '/research' | relative_url }}"{% if page.url contains '/research' %} aria-current="page"{% endif %}>Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ '/public-scholarship' | relative_url }}"{% if page.url contains '/public-scholarship' %} aria-current="page"{% endif %}>Public Scholarship</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ '/publications' | relative_url }}"{% if page.url contains '/publications' %} aria-current="page"{% endif %}>Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ '/cv' | relative_url }}"{% if page.url contains '/cv' %} aria-current="page"{% endif %}>CV</a></li>
+        <ul class="nav-list" id="home-nav-list" role="list">
+          <li class="nav-item"><a class="nav-link" href="{{ '/research' | relative_url }}">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/public-scholarship' | relative_url }}">Public Scholarship</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/publications' | relative_url }}">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ '/cv' | relative_url }}">CV</a></li>
         </ul>
       </div>
     </nav>
 
     <main id="main-content" tabindex="-1">
-      <div class="content-wrapper inner-page">
-        <h1 class="page-title">{{ page.title }}</h1>
+      <div class="home-hero">
+        {% if site.photo %}
+        <img src="{{ site.photo | relative_url }}" alt="Portrait of Kate Thornhill" class="home-photo">
+        {% endif %}
+        <h1 class="home-name">Kate Thornhill</h1>
+        <p class="home-title">Researcher &middot; Librarian &middot; Public Scholar</p>
         {{ content }}
       </div>
     </main>
@@ -46,7 +49,7 @@
     <script>
       (function () {
         var hamburger = document.querySelector('.nav-hamburger');
-        var navList   = document.getElementById('page-nav-list');
+        var navList   = document.getElementById('home-nav-list');
         if (!hamburger || !navList) return;
 
         hamburger.addEventListener('click', function () {
