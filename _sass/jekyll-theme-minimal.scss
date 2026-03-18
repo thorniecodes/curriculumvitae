@@ -818,3 +818,42 @@ main {
     content: none;
   }
 }
+
+// ─── Public Scholarship Page ──────────────────────────────────────────────────
+
+.ps-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.project-meta {
+  font-size: 0.875rem;
+  color: $color-sand;
+  font-style: italic;
+  margin: -0.5rem 0 1.25rem;
+}
+
+.project-visit-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid $color-sand;
+  color: $color-sand;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: $color-sand;
+    color: $color-nav-bg;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-sand;
+    outline-offset: 2px;
+  }
+}
